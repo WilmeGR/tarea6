@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+<div class="BarraTop">
+    <a href="{{url_for('index')}}"><button>Inicio</button></a>
+    <a href="{{url_for('mision')}}"><button>Mision</button></a>
+    <a href="{{url_for('servicios')}}"><button>Servicios</button></a>
+    <a href="{{url_for('valores')}}"><button>Valores</button></a>
+    <a href="{{url_for('contactos')}}"><button>Contactos</button></a>
+</div>
+<div class="contenido"> 
+    {% block contenido %}
+
+    {% endblock %}
+</div>
+
+<div class="pie_pag">
+    {% block pie %}
+<p>Derechos reservados por: Wilme, Johan & Rayn</p>
+    {% endblock %}
+</div>
+</body>
+</html>
